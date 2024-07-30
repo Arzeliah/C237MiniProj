@@ -10,10 +10,10 @@ const port = 3000;
 
 // MySQL Connection
 const db = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: '',
-    database: 'online_shop'
+    host: 'mysql-arzeliah.alwaysdata.net',
+    user: 'arzeliah',
+    password: '4lw4ysD@T@',
+    database: 'arzeliah_miniproj'
 });
 
 db.connect((err) => {
