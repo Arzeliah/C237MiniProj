@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sold Products</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        .product {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sold Products</h1>
+    <ul>
+        <% products.forEach(product => { %>
+            <% if (product.sold) { %>
+                <li class="product">
+                    <h3><%= product.name %></h3>
+                    <p><%= product.description %></p>
+                    <p>Price: $<%= product.price.toFixed(2) %></p>
+                    <p><strong>SOLD</strong></p>
+                </li>
+            <% } %>
+        <% }); %>
+    </ul>
+    <a href="/">Back to Products</a>
+</body>
+</html>
